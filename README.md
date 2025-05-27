@@ -47,12 +47,10 @@ After registration and login, enter the received token into swagger - there is a
 | DELETE | `/notifications/{id}`      | Delete a notification and cancel schedule    |
 | POST   | `/notifications/{id}/send` | Manually trigger immediate delivery          |
 
-📸 _Screenshot: Scheduled + Incoming Notifications_
-![Screen Shot 2025-05-27 at 14.10.30.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fzf%2Fwk7lj9_94bs45p2w60z4x5400000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_9Pvryy%2FScreen%20Shot%202025-05-27%20at%2014.10.30.png)
-![Screen Shot 2025-05-27 at 14.09.38.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fzf%2Fwk7lj9_94bs45p2w60z4x5400000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_CIWAkV%2FScreen%20Shot%202025-05-27%20at%2014.09.38.png)
----
-![Screen Shot 2025-05-27 at 14.10.01.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fzf%2Fwk7lj9_94bs45p2w60z4x5400000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_AvmY07%2FScreen%20Shot%202025-05-27%20at%2014.10.01.png)
+ _Screenshot: Scheduled + Incoming Notifications_
 
+![Screen Shot 2025-05-27 at 17 37 59](https://github.com/user-attachments/assets/70282144-6a25-4fb3-9ff5-f43f2df761f7)
+![Screen Shot 2025-05-27 at 17 38 19](https://github.com/user-attachments/assets/17544504-6e83-4a51-b9ba-5734ef4c25b7)
 1. CRON:
 ```bash
 
