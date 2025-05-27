@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: ens_postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: ens2
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - ens-net
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: ens_mailhog
+    ports:
+      - "1025:1025"  # SMTP
+      - "8025:8025"  # Web UI
+    networks:
+      - ens-net
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ens_app
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+      - mailhog
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/ens2
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 1234
+
+      # SMTP (если будешь использовать JavaMailSender)
+      SPRING_MAIL_HOST: mailhog
+      SPRING_MAIL_PORT: 1025
+      SPRING_MAIL_USERNAME: dummy
+      SPRING_MAIL_PASSWORD: dummy
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_AUTH: false
+      SPRING_MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE: false
+    networks:
+      - ens-net
+
+volumes:
+  pgdata:
+
+networks:
+  ens-net:
