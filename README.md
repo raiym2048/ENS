@@ -33,8 +33,8 @@ You need:
 
 Use Swagger UI to register users.
 After registration and login, enter the received token into swagger - there is a column with a picture of the key where you can enter the token
+![Screen Shot 2025-05-27 at 17 36 20](https://github.com/user-attachments/assets/3b56a431-1b8f-4cc0-b474-ed7fa54f3b25)
 
-![Screen Shot 2025-05-27 at 14.24.53.png](..%2F..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fzf%2Fwk7lj9_94bs45p2w60z4x5400000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_uoy1aJ%2FScreen%20Shot%202025-05-27%20at%2014.24.53.png)
 ## ⚙️ API Endpoints
 
 | Method | Endpoint                   | Description                                  |
